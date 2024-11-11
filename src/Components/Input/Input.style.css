@@ -1,4 +1,5 @@
 .input-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -12,6 +13,9 @@
 .input-label-error {
   color: red; 
 }
+/* .placeholder{
+  margin-left: 200px;
+} */
 .input {
   padding: 8px;
   font-size: 1rem; /* Sets font size relative to root element, 16px */
@@ -40,10 +44,6 @@ width: auto;
 height: auto;
 }
 
-/* .input.required {
-  border: 2px solid red;
-} */
-
 .input:required {
   border: 2px solid red; 
 }
@@ -70,5 +70,19 @@ height: auto;
   /* margin-top: 2px; */
 }
 .start-icon {
-  margin-right: 8px; 
+  /* margin-right: 8px; */
+  position: absolute;
+  top: 55%;
+  left: 10px; 
+  /* color: #aaa; Optional: change icon color  */
+}
+.end-icon {
+  position: absolute;
+  top: 55%;
+  left: 200px; 
+  /* color: #aaa; change icon color  */
+}
+
+.input-container input {
+  padding-left: 35px;
 }

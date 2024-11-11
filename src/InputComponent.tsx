@@ -18,14 +18,25 @@ function InputTest() {
         <Input
           variant="filled"
           placeholder="Username"
+          label = "Username"
           value={inputValue}
           onChange={handleChange}
           startIcon = "fa-regular fa-user"
+          // className="start-icon-outside"
         />
-        <Input variant="underlined" placeholder="Underlined Input" />
-        <Input variant="filled" placeholder="Disabled" disabled />
-        <Input variant="rounded" placeholder="Rounded" />
-        <Input placeholder="FullWidth" fullWidth />
+          <Input
+            variant="filled"
+            placeholder="Username"
+            startIcon = "fa-solid fa-bars"
+            endIcon = "fas fa-search"
+            label = "Username"
+            // className="start-icon-inside "
+          />
+        <Input variant="underlined" placeholder="Underlined Input" label = "Underlined" />
+        <Input variant="underlined" placeholder="Underlined Input" label = "Underlined"/>
+        <Input variant="filled" placeholder="Disabled" disabled  label = "Disabled"/>
+        <Input variant="rounded" placeholder="Rounded" label = "Rounded" />
+        <Input placeholder="FullWidth" className="full-width" label = "FullWidth" />
       </div>
 
       {/* ////////////////////////////////////////////////////// */}
@@ -36,11 +47,12 @@ function InputTest() {
           type="password"
           placeholder="Password"
           startIcon="fa-regular fa-lock"
+          label = "OUtlined"
           // value={inputValue}
           // onChange={handleChange}
         />
-        <Input variant="filled" type="number" placeholder="Number" />
-        <Input variant="outlined" placeholder="Required Field" required />
+        <Input variant="filled" type="number" placeholder="Number" label = "Filled" />
+        <Input variant="outlined" placeholder="Required Field" required label = "Required" />
         <Input variant="filled" defaultValue="Default Value" />
       </div>
       {/* ////////////////////////////////////////////////////// */}

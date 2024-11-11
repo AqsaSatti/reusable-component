@@ -5,35 +5,79 @@ import './Input.style.css';
 const Input: React.FC<InputProps> = ({
   variant = 'outlined',
   placeholder = '',
+  label,
   value,
   onChange,
   type = 'text',
   disabled = false,
   required = false,
   defaultValue,
-  fullWidth = false,
   error = false,
   errorMessage,
   startIcon,
-  className=''
+  endIcon,
+  className = ''
 }) => {
   // Combine base class with variant class
-  const inputClass = `input ${variant} ${fullWidth ? 'full-width' : ''}  ${error ? 'input-error' : ''} ${className && className}`;
+  const inputClass = `input ${variant} ${error ? 'input-error' : ''} ${className && className} `;
   const labelClass = `input-label ${error ? 'input-label-error' : ''}`;
   return (
+    // <div className="input-container">
+    //   <label className={labelClass}>
+    //     {placeholder}
+    //     {required && <span className="required-asterisk">*</span>}
+    //   </label>
+
+    //   <div className='input-wrapper'>
+    //     <div>
+    //       {startIcon && className === "start-icon-outside" && (
+    //         <span className="start-icon">
+    //           {startIcon && <i className={`fa ${startIcon}`} />}
+    //         </span>
+    //       )}
+
+    //       {startIcon && className === "start-icon-inside" && (
+    //         <span className="start-icon">
+    //           {startIcon && <i className={`fa ${startIcon}`} />}
+    //         </span>
+    //       )}
+    //     </div>
+
+    //     <div>
+    //       <input
+    //         className={inputClass}
+    //         type={type}
+    //         placeholder={placeholder} // Remove placeholder text if required
+    //         value={value}
+    //         onChange={onChange}
+    //         disabled={disabled}
+    //         required={required}
+    //         defaultValue={defaultValue}
+    //       />
+    //     </div>
+
+    //   </div>
+
+
+    //   {error && <div className='error-text'>{errorMessage}</div>}
+
+
+    // </div>
+
     <div className="input-container">
-      <label className={labelClass}>
-        {placeholder}
+      <label className={labelClass} >
+         {label}
         {required && <span className="required-asterisk">*</span>}
       </label>
+
       <div>
-      {startIcon && (
-        <span className="start-icon">
-          {startIcon && <i className={`fa ${startIcon}`} />}
-        </span>
-      )}
+        {startIcon && (
+          <span className="start-icon">
+            {startIcon && <i className={`fa ${startIcon}`} />}
+          </span>
+        )}
         <input
-          className={inputClass}
+          className={`${inputClass} `}
           type={type}
           placeholder={placeholder} // Remove placeholder text if required
           value={value}
@@ -42,8 +86,15 @@ const Input: React.FC<InputProps> = ({
           required={required}
           defaultValue={defaultValue}
         />
-        {error && <div className='error-text'>{errorMessage}</div>}
+        {endIcon && (
+          <span className="end-icon">
+            {endIcon && <i className={`fa ${endIcon}`} />}
+          </span>
+        )}
       </div>
+
+      {error && <div className='error-text'>{errorMessage}</div>}
+
 
     </div>
   );
