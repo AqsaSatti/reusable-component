@@ -4,6 +4,7 @@ import { ChangeEvent, HTMLInputTypeAttribute } from 'react';
 export interface InputProps {
   variant?: 'outlined' | 'filled' | 'underlined' | 'rounded' ; 
   placeholder?: string; 
+  label?: string; 
   value?: string;
   onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
   type?: HTMLInputTypeAttribute; // Support for different input types (text, password, etc.)
@@ -16,5 +17,6 @@ export interface InputProps {
   error?: boolean;
   errorMessage?: string;
   startIcon?:string;
+  endIcon?:string;
   className?:string;
 }
