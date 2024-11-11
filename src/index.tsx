@@ -14,8 +14,8 @@ root.render(
     {/* <App /> */}
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<InputTest />} />
-        <Route path="/input-test" element={<App />} />
+        <Route path="/app" element={<App />} />
+        <Route path="/input" element={<InputTest />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
