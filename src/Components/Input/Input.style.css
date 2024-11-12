@@ -1,88 +1,118 @@
+:root {
+  --red: red;
+  --blue: #007bff;
+  --bg-color: #f1f1f1;
+  --bx-shadow: rgba(0, 123, 255, 0.5);
+  --border: 2px solid var(--blue);
+  --icon-color: blueviolet;
+  --gap: 8px;
+  --rounded-border-radius: 25px;
+  --icon-spacing: 35px;
+  --input-width: 250px;
+  --input-height: 45px;
+  --icon-position-top: 25%;
+}
+
 .input-container {
-  position: relative;
+  /* position: relative; */
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: var(--gap);
 }
 
 .input-label {
-  font-size: 1rem;
+  font-size:16px;
   color: #333;
-  /* margin-left: 20px; */
 }
 .input-label-error {
-  color: red; 
+  color: var(--red); 
 }
 /* .placeholder{
   margin-left: 200px;
 } */
 .input {
   padding: 8px;
-  font-size: 1rem; /* Sets font size relative to root element, 16px */
+  font-size: 16px; 
   border-radius: 4px;
   border: 1px solid #ccc;
-  width: 250px; 
-  height: 45px;
+  width: var(--input-width); 
+  height: var(--input-height);
   box-sizing: border-box; /* Ensures padding is included in the width/height */
+  padding-right: 50px;
 }
-.input.outlined {
-  border: 1px solid #007bff;
+input.outlined {
+  border: 1px solid purple;
+  width: auto;
+  /* border: none !important; */
 }
 
 .filled {
-  background-color: #f1f1f1;
+  background-color: var(--bg-color);
   border: none;
 }
 
 .underlined {
   border: none;
-  border-bottom: 2px solid #007bff;
+  border-bottom: var(--border);
 }
 .input.rounded{
-border-radius: 30px !important ;
+border-radius: var(--rounded-border-radius) !important ;
 width: auto; 
 height: auto;
+padding-left: 17px;
 }
 
 .input:required {
-  border: 2px solid red; 
+  border: 2px solid var(--red); ; 
 }
 .required-asterisk {
-  color: red; 
+  color: var(--red); ; 
   margin-left: 4px;
 }
 .input:focus {
   /* border-color: inherit; Prevent border color from changing on focus */
-  border-color: #007bff; /*Blue border color on focus*/
-   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); 
+  border-color: var(--blue); /*Blue border color on focus*/
+   box-shadow: 0 0 5px var(--bx-shadow); 
    outline: none;
 }
 .input.full-width {
   width: 100%; /* Make the input full width */
 }
 .input.input-error {
-  border-color: red; 
-  border: 2px solid red;
+  border-color: var(--red); ; 
+  border: 2px solid var(--red); ;
 }
 .error-text {
-  color: red;
+  color: var(--red); 
   font-size: 16px;
-  /* margin-top: 2px; */
+  margin-top: -25px;
+
 }
 .start-icon {
   /* margin-right: 8px; */
   position: absolute;
-  top: 55%;
+  top: var(--icon-position-top);
   left: 10px; 
-  /* color: #aaa; Optional: change icon color  */
+  color: var(--icon-color)
 }
 .end-icon {
   position: absolute;
-  top: 55%;
+  top: var(--icon-position-top);
   left: 200px; 
+  margin-left: 16px;
+  color:var(--icon-color);
   /* color: #aaa; change icon color  */
 }
 
-.input-container input {
+.icon-spacing {
+  padding-left:var(--icon-spacing)
+}
+/* .input-container input {
   padding-left: 35px;
+} */
+.input-wrapper{
+  position: relative;
+}
+.disabled-icon{
+color:#ccc;
 }

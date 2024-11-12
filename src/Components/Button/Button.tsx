@@ -23,14 +23,14 @@ const Button = ({ variant = "contained", onClick, children, size, startIcon, end
       {variant === "send" && <i class="fa fa-paper-plane icon-spacing" ></i>} */}
 
       {startIcon && (
-        <span className="start-icon">
+        <span className="start-icon-button">
           {startIcon && <i className={`fa ${startIcon}`} />}
         </span>
       )}
       {children}
       {endIcon && (
-        <span className='end-icon'>
-           <i className={`fa ${endIcon}`}/>
+        <span className='end-icon-button'>
+          <i className={`fa ${endIcon}`} />
         </span>
       )}
     </button>

@@ -33,8 +33,7 @@ function InputTest() {
             // className="start-icon-inside "
           />
         <Input variant="underlined" placeholder="Underlined Input" label = "Underlined" />
-        <Input variant="underlined" placeholder="Underlined Input" label = "Underlined"/>
-        <Input variant="filled" placeholder="Disabled" disabled  label = "Disabled"/>
+        <Input variant="filled" placeholder="Disabled" disabled  label = "Disabled" startIcon = "fa-regular fa-user"/>
         <Input variant="rounded" placeholder="Rounded" label = "Rounded" />
         <Input placeholder="FullWidth" className="full-width" label = "FullWidth" />
       </div>
@@ -42,15 +41,13 @@ function InputTest() {
       {/* ////////////////////////////////////////////////////// */}
       <h5 className="mt-5">Form Props</h5>
       <div className="d-flex flex-column gap-3 ">
-        <Input
+        {/* <Input
           variant="outlined"
           type="password"
           placeholder="Password"
           startIcon="fa-regular fa-lock"
           label = "OUtlined"
-          // value={inputValue}
-          // onChange={handleChange}
-        />
+        /> */}
         <Input variant="filled" type="number" placeholder="Number" label = "Filled" />
         <Input variant="outlined" placeholder="Required Field" required label = "Required" />
         <Input variant="filled" defaultValue="Default Value" />
@@ -63,7 +60,6 @@ function InputTest() {
       {/* ////////////////////////////////////////////////////// */}
       <h5 className="mt-5">Types</h5>
       <div className="d-flex flex-column gap-3 ">
-        <Input placeholder="Button" type="button" />
         <Input placeholder="date" type="date" />
         <Input placeholder="email" type="email" />
         <Input placeholder="color" type="color" />

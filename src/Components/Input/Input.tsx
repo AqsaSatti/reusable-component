@@ -19,8 +19,9 @@ const Input: React.FC<InputProps> = ({
   className = ''
 }) => {
   // Combine base class with variant class
-  const inputClass = `input ${variant} ${error ? 'input-error' : ''} ${className && className} `;
+  const inputClass = `input ${variant} ${error ? 'input-error' : ''} ${className && className} ${startIcon ? 'icon-spacing' : ''} `;
   const labelClass = `input-label ${error ? 'input-label-error' : ''}`;
+  const iconClass = `start-icon ${disabled ? 'disabled-icon' : ''} `;
   return (
     // <div className="input-container">
     //   <label className={labelClass}>
@@ -66,36 +67,34 @@ const Input: React.FC<InputProps> = ({
 
     <div className="input-container">
       <label className={labelClass} >
-         {label}
+        {label}
         {required && <span className="required-asterisk">*</span>}
       </label>
 
-      <div>
-        {startIcon && (
-          <span className="start-icon">
-            {startIcon && <i className={`fa ${startIcon}`} />}
-          </span>
-        )}
-        <input
-          className={`${inputClass} `}
-          type={type}
-          placeholder={placeholder} // Remove placeholder text if required
-          value={value}
-          onChange={onChange}
-          disabled={disabled}
-          required={required}
-          defaultValue={defaultValue}
-        />
-        {endIcon && (
-          <span className="end-icon">
-            {endIcon && <i className={`fa ${endIcon}`} />}
-          </span>
-        )}
+      <div className='input-wrapper'>
+      
+          {startIcon && (
+            <span className={iconClass}>
+              {startIcon && <i className={`fa ${startIcon}`} />}
+            </span>
+          )}
+          <input
+            className={`${inputClass} `}
+            type={type}
+            placeholder={placeholder} // Remove placeholder text if required
+            value={value}
+            onChange={onChange}
+            disabled={disabled}
+            required={required}
+            defaultValue={defaultValue}
+          />
+          {endIcon && (
+            <span className="end-icon">
+              {endIcon && <i className={`fa ${endIcon}`} />}
+            </span>
+          )}
+        {error && <p className='error-text'>{errorMessage}</p>}
       </div>
-
-      {error && <div className='error-text'>{errorMessage}</div>}
-
-
     </div>
   );
 };
