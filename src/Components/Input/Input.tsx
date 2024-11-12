@@ -21,7 +21,7 @@ const Input: React.FC<InputProps> = ({
   // Combine base class with variant class
   const inputClass = `input ${variant} ${error ? 'input-error' : ''} ${className && className} ${startIcon ? 'icon-spacing' : ''} `;
   const labelClass = `input-label ${error ? 'input-label-error' : ''}`;
-  const iconClass = `start-icon ${disabled ? 'disabled-icon' : ''} `;
+  const iconClass = `start_icon ${disabled ? 'disabled-icon' : ''} `;
   return (
     // <div className="input-container">
     //   <label className={labelClass}>
@@ -89,7 +89,7 @@ const Input: React.FC<InputProps> = ({
             defaultValue={defaultValue}
           />
           {endIcon && (
-            <span className="end-icon">
+            <span className="end_icon">
               {endIcon && <i className={`fa ${endIcon}`} />}
             </span>
           )}
