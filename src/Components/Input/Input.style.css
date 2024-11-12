@@ -88,14 +88,14 @@ padding-left: 17px;
   margin-top: -25px;
 
 }
-.start-icon {
+.start_icon {
   /* margin-right: 8px; */
   position: absolute;
   top: var(--icon-position-top);
   left: 10px; 
   color: var(--icon-color)
 }
-.end-icon {
+.end_icon {
   position: absolute;
   top: var(--icon-position-top);
   left: 200px; 

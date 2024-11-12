@@ -1,5 +1,6 @@
 import React from 'react';
-import './Button.style.css'
+// import styles from './Button.style.module.css'
+import  './Button.style.css'
 import { ButtonProps } from './Button.interface';
 
 // export interface ButtonProps {
@@ -14,7 +15,6 @@ const Button = ({ variant = "contained", onClick, children, size, startIcon, end
 
   return (
     <button
-
       className={`${variant} ${size} ${color}`}
       onClick={onClick}
       disabled={disabled}
@@ -23,13 +23,13 @@ const Button = ({ variant = "contained", onClick, children, size, startIcon, end
       {variant === "send" && <i class="fa fa-paper-plane icon-spacing" ></i>} */}
 
       {startIcon && (
-        <span className="start-icon-button">
+        <span className="start_icon_button">
           {startIcon && <i className={`fa ${startIcon}`} />}
         </span>
       )}
       {children}
       {endIcon && (
-        <span className='end-icon-button'>
+        <span className="end_icon_button">
           <i className={`fa ${endIcon}`} />
         </span>
       )}
