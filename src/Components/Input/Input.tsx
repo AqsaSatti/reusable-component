@@ -7,6 +7,8 @@ const Input: React.FC<InputProps> = ({
   placeholder = '',
   label,
   value,
+  name,
+  autoComplete,
   onChange,
   type = 'text',
   disabled = false,
@@ -23,48 +25,6 @@ const Input: React.FC<InputProps> = ({
   const labelClass = `input-label ${error ? 'input-label-error' : ''}`;
   const iconClass = `start_icon ${disabled ? 'disabled-icon' : ''} `;
   return (
-    // <div className="input-container">
-    //   <label className={labelClass}>
-    //     {placeholder}
-    //     {required && <span className="required-asterisk">*</span>}
-    //   </label>
-
-    //   <div className='input-wrapper'>
-    //     <div>
-    //       {startIcon && className === "start-icon-outside" && (
-    //         <span className="start-icon">
-    //           {startIcon && <i className={`fa ${startIcon}`} />}
-    //         </span>
-    //       )}
-
-    //       {startIcon && className === "start-icon-inside" && (
-    //         <span className="start-icon">
-    //           {startIcon && <i className={`fa ${startIcon}`} />}
-    //         </span>
-    //       )}
-    //     </div>
-
-    //     <div>
-    //       <input
-    //         className={inputClass}
-    //         type={type}
-    //         placeholder={placeholder} // Remove placeholder text if required
-    //         value={value}
-    //         onChange={onChange}
-    //         disabled={disabled}
-    //         required={required}
-    //         defaultValue={defaultValue}
-    //       />
-    //     </div>
-
-    //   </div>
-
-
-    //   {error && <div className='error-text'>{errorMessage}</div>}
-
-
-    // </div>
-
     <div className="input-container">
       <label className={labelClass} >
         {label}
@@ -83,10 +43,12 @@ const Input: React.FC<InputProps> = ({
             type={type}
             placeholder={placeholder} // Remove placeholder text if required
             value={value}
+            name={name}
             onChange={onChange}
             disabled={disabled}
             required={required}
             defaultValue={defaultValue}
+            autoComplete = {autoComplete}
           />
           {endIcon && (
             <span className="end_icon">

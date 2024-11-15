@@ -6,6 +6,8 @@ export interface InputProps {
   placeholder?: string; 
   label?: string; 
   value?: string;
+  name?: string;
+  autoComplete?: string;
   onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
   type?: HTMLInputTypeAttribute; // Support for different input types (text, password, etc.)
   // type?: 'text' | 'password' | 'number';

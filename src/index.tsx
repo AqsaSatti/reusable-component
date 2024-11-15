@@ -5,6 +5,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import InputTest from './InputComponent';
+import SignUp from "./Components/SignUpForm/SignUpForm";
+import SignUp2 from "./Components/SignUpForm/SignUpFormWithoutUsingComponent"
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -16,6 +18,8 @@ root.render(
       <Routes>
         <Route path="/app" element={<App />} />
         <Route path="/input" element={<InputTest />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/SignUp2" element={<SignUp2 />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

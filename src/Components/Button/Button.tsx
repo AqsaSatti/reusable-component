@@ -15,6 +15,7 @@ const Button = ({ variant = "contained", onClick, children, size, startIcon, end
 
   return (
     <button
+      data-testId = "btn-id"
       className={`${variant} ${size} ${color}`}
       onClick={onClick}
       disabled={disabled}

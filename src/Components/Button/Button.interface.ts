@@ -1,5 +1,5 @@
 export interface ButtonProps{
-    children:string;
+    children?:string;
     variant?:string;
     startIcon?:string;
     // endIcon?:React.ReactNode;

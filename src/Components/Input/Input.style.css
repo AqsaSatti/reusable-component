@@ -10,7 +10,7 @@
   --icon-spacing: 35px;
   --input-width: 250px;
   --input-height: 45px;
-  --icon-position-top: 25%;
+  --icon-position-top: 16%;
 }
 
 .input-container {
@@ -91,10 +91,16 @@ padding-left: 17px;
 .start_icon {
   /* margin-right: 8px; */
   position: absolute;
-  top: var(--icon-position-top);
+  /* top: var(--icon-position-top); */
+  transform: translate(20%, 43%);
   left: 10px; 
-  color: var(--icon-color)
+  color: var(--icon-color);
+ 
 }
+/* .icon_size{
+  width:12px;
+  height:12px;
+} */
 .end_icon {
   position: absolute;
   top: var(--icon-position-top);

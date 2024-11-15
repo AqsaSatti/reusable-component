@@ -77,7 +77,7 @@ function App() {
       {/* /////////////////////////////////////////// */}
       <br></br>
       <div className="d-flex flex-column ">
-        <Button variant="contained" size="small" onClick={() => alert("contained button clicked")}> Contained </Button>
+        <Button variant="contained" size="medium" onClick={() => alert("contained button clicked")}> Contained </Button>
 
         <Button  disabled size="medium" onClick={() => alert("disabled button clicked")}> Disabled </Button>
 

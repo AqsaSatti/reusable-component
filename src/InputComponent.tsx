@@ -14,28 +14,63 @@ function InputTest() {
     <div className="container mb-5">
       <h5 className="mt-5">Basic TextField</h5>
       <div className="d-flex flex-column gap-3 ">
-        <Input variant="outlined" placeholder="Outlined Input" />
+        <Input
+          variant="outlined"
+          placeholder="Outlined Input"
+          value={inputValue}
+          onChange={handleChange}
+        />
         <Input
           variant="filled"
           placeholder="Username"
-          label = "Username"
+          type="text"
+          label="Username"
           value={inputValue}
           onChange={handleChange}
-          startIcon = "fa-regular fa-user"
+          startIcon="fa-regular fa-user"
           // className="start-icon-outside"
         />
-          <Input
-            variant="filled"
-            placeholder="Username"
-            startIcon = "fa-solid fa-bars"
-            endIcon = "fas fa-search"
-            label = "Username"
-            // className="start-icon-inside "
-          />
-        <Input variant="underlined" placeholder="Underlined Input" label = "Underlined" />
-        <Input variant="filled" placeholder="Disabled" disabled  label = "Disabled" startIcon = "fa-regular fa-user"/>
-        <Input variant="rounded" placeholder="Rounded" label = "Rounded" />
-        <Input placeholder="FullWidth" className="full-width" label = "FullWidth" />
+        <Input
+          variant="filled"
+          placeholder="Username"
+          startIcon="fa-solid fa-bars"
+          endIcon="fas fa-search"
+          label="Username"
+          value={inputValue}
+          onChange={handleChange}
+          // className="start-icon-inside "
+        />
+        <Input
+          variant="underlined"
+          placeholder="Underlined Input"
+          label="Underlined"
+          defaultValue="input"
+          value={inputValue}
+          onChange={handleChange}
+        />
+        <Input
+          variant="filled"
+          placeholder="Disabled"
+          value={inputValue}
+          onChange={handleChange}
+          disabled
+          label="Disabled"
+          startIcon="fa-regular fa-user"
+        />
+        <Input
+          variant="rounded"
+          placeholder="Rounded"
+          label="Rounded"
+          value={inputValue}
+          onChange={handleChange}
+        />
+        <Input
+          placeholder="FullWidth"
+          className="full-width"
+          label="FullWidth"
+          value={inputValue}
+          onChange={handleChange}
+        />
       </div>
 
       {/* ////////////////////////////////////////////////////// */}
@@ -48,8 +83,18 @@ function InputTest() {
           startIcon="fa-regular fa-lock"
           label = "OUtlined"
         /> */}
-        <Input variant="filled" type="number" placeholder="Number" label = "Filled" />
-        <Input variant="outlined" placeholder="Required Field" required label = "Required" />
+        <Input
+          variant="filled"
+          type="number"
+          placeholder="Number"
+          label="Filled"
+        />
+        <Input
+          variant="outlined"
+          placeholder="Required Field"
+          required
+          label="Required"
+        />
         <Input variant="filled" defaultValue="Default Value" />
       </div>
       {/* ////////////////////////////////////////////////////// */}

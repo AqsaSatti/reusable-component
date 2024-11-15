@@ -33,8 +33,9 @@ const meta = {
     args: {
           variant:"filled",
           placeholder:"Username",
-          startIcon:"fa-regular fa-user",
-           endIcon : "fas fa-search",
+          startIcon:"fa-solid fa-bars",
+          endIcon : "fas fa-search",
+          label:"Username"
     },
   };
   export const Underlined: Story = {
